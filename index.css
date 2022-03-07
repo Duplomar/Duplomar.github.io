@@ -1,0 +1,416 @@
+
+body {
+    background-color: #3e3e3e;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #666666;
+}
+input, div.submenu {
+    display: none;
+    list-style:none;
+    text-decoration: none;
+    margin-top: 15px;
+    background-color: #eeeeee;
+  }
+
+  
+label {
+position: relative;
+display: block;
+cursor: pointer;
+background: #181818;
+width: 100%;
+color: #eeee00;
+font-weight: bolder;
+text-indent: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 10px;
+margin-top: 5px;
+
+}
+
+
+#check1:checked~#drop1 {
+display: block;
+}
+
+#check2:checked~#drop2 {
+display: block;
+}
+
+#check3:checked~#drop3 {
+display: block;
+}
+
+#check4:checked~#drop4 {
+display: block;
+}
+
+#check5:checked~#drop5 {
+display: block;
+}
+
+#check6:checked~#drop6 {
+display: block;
+}
+
+#check7:checked~#drop7 {
+display: block;
+}
+
+#check8:checked~#drop8 {
+display: block;
+}
+
+#check9:checked~#drop9 {
+display: block;
+}
+
+#check10:checked~#drop10 {
+display: block;
+}
+
+#check11:checked~#drop11 {
+display: block;
+}
+
+#check12:checked~#drop12 {
+display: block;
+}
+
+#check13:checked~#drop13 {
+display: block;
+}
+
+#check14:checked~#drop14 {
+display: block;
+}
+
+#check15:checked~#drop15 {
+display: block;
+}
+
+#check16:checked~#drop16 {
+display: block;
+}
+
+#check17:checked~#drop17 {
+display: block;
+}
+
+#check18:checked~#drop18 {
+display: block;
+}
+
+#check19:checked~#drop19 {
+display: block;
+}
+
+#check20:checked~#drop20 {
+display: block;
+}
+
+#check21:checked~#drop21 {
+display: block;
+}
+
+#check22:checked~#drop22 {
+display: block;
+}
+
+#check23:checked~#drop23 {
+display: block;
+}
+
+#check24:checked~#drop24 {
+display: block;
+}
+
+#check25:checked~#drop25 {
+display: block;
+}
+
+#check26:checked~#drop26 {
+display: block;
+}
+
+#check27:checked~#drop27 {
+display: block;
+}
+
+#check28:checked~#drop28 {
+display: block;
+}
+
+#check29:checked~#drop29 {
+display: block;
+}
+
+#check30:checked~#drop30 {
+display: block;
+}
+
+#check31:checked~#drop31 {
+display: block;
+}
+
+#check32:checked~#drop32 {
+display: block;
+}
+
+#check33:checked~#drop33 {
+display: block;
+}
+
+#check34:checked~#drop34 {
+display: block;
+}
+
+#check35:checked~#drop35 {
+display: block;
+}
+
+#check36:checked~#drop36 {
+display: block;
+}
+
+#check37:checked~#drop37 {
+display: block;
+}
+
+#check38:checked~#drop38 {
+display: block;
+}
+
+#check39:checked~#drop39 {
+display: block;
+}
+
+#check40:checked~#drop40 {
+display: block;
+}
+
+#check41:checked~#drop41 {
+display: block;
+}
+
+#check42:checked~#drop42 {
+display: block;
+}
+
+#check43:checked~#drop43 {
+display: block;
+}
+
+#check44:checked~#drop44 {
+display: block;
+}
+
+#check45:checked~#drop45 {
+display: block;
+}
+
+#check46:checked~#drop46 {
+display: block;
+}
+
+#check47:checked~#drop47 {
+display: block;
+}
+
+#check48:checked~#drop48 {
+display: block;
+}
+
+#check49:checked~#drop49 {
+display: block;
+}
+
+#check50:checked~#drop50 {
+display: block;
+}
+
+#check51:checked~#drop51 {
+display: block;
+}
+
+#check52:checked~#drop52 {
+display: block;
+}
+
+#check53:checked~#drop53 {
+display: block;
+}
+
+#check54:checked~#drop54 {
+display: block;
+}
+
+#check55:checked~#drop55 {
+display: block;
+}
+
+#check56:checked~#drop56 {
+display: block;
+}
+
+#check57:checked~#drop57 {
+display: block;
+}
+
+#check58:checked~#drop58 {
+display: block;
+}
+
+#check59:checked~#drop59 {
+display: block;
+}
+
+#check60:checked~#drop60 {
+display: block;
+}
+
+#check61:checked~#drop61 {
+display: block;
+}
+
+#check62:checked~#drop62 {
+display: block;
+}
+
+#check63:checked~#drop63 {
+display: block;
+}
+
+#check64:checked~#drop64 {
+display: block;
+}
+
+#check65:checked~#drop65 {
+display: block;
+}
+
+#check66:checked~#drop66 {
+display: block;
+}
+
+#check67:checked~#drop67 {
+display: block;
+}
+
+#check68:checked~#drop68 {
+display: block;
+}
+
+#check69:checked~#drop69 {
+display: block;
+}
+
+#check70:checked~#drop70 {
+display: block;
+}
+
+#check71:checked~#drop71 {
+display: block;
+}
+
+#check72:checked~#drop72 {
+display: block;
+}
+
+#check73:checked~#drop73 {
+display: block;
+}
+
+#check74:checked~#drop74 {
+display: block;
+}
+
+#check75:checked~#drop75 {
+display: block;
+}
+
+#check76:checked~#drop76 {
+display: block;
+}
+
+#check77:checked~#drop77 {
+display: block;
+}
+
+#check78:checked~#drop78 {
+display: block;
+}
+
+#check79:checked~#drop79 {
+display: block;
+}
+
+#check80:checked~#drop80 {
+display: block;
+}
+
+#check81:checked~#drop81 {
+display: block;
+}
+
+#check82:checked~#drop82 {
+display: block;
+}
+
+#check83:checked~#drop83 {
+display: block;
+}
+
+#check84:checked~#drop84 {
+display: block;
+}
+
+#check85:checked~#drop85 {
+display: block;
+}
+
+#check86:checked~#drop86 {
+display: block;
+}
+
+#check87:checked~#drop87 {
+display: block;
+}
+
+#check88:checked~#drop88 {
+display: block;
+}
+
+#check-1:checked~#drop-1 {
+display: block;
+}
+
+
+
+#searchbar{
+  background-color: #666666;
+  color: #eeee00;
+  font-size: 25px;
+  text-align: center;
+  position:sticky;
+  top: 0px;
+  height: 40px;
+  border-style: none;
+  z-index:2;
+  width:100%;
+  display: block;
+}
+

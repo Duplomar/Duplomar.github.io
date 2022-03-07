@@ -1,4 +1,1976 @@
-<html>
-<p>Test</p>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Melodia 2022</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="index.css">
+
+<script>
+
+var num_of_songs = 88;
+terms = [
+{'search': 'portos visa 1', 'id': 'song1'}, 
+{'search': 'det var i vår ungdom 2', 'id': 'song2'}, 
+{'search': 'stackars teknis 3', 'id': 'song3'}, 
+{'search': 'kalmarevisan 4', 'id': 'song4'}, 
+{'search': 'dance macabre 5', 'id': 'song5'}, 
+{'search': 'när jag är fuller 6', 'id': 'song6'}, 
+{'search': 'système internationale 7', 'id': 'song7'}, 
+{'search': 'mediehymnen 8', 'id': 'song8'}, 
+{'search': 'sång för medieteknik 9', 'id': 'song9'}, 
+{'search': 'mediemarshen 10', 'id': 'song10'}, 
+{'search': 'mamma media 11', 'id': 'song11'}, 
+{'search': 'jag vill va som du 12', 'id': 'song12'}, 
+{'search': 'medias visa 13', 'id': 'song13'}, 
+{'search': 'minnen för livet 14', 'id': 'song14'}, 
+{'search': 'partydags 15', 'id': 'song15'}, 
+{'search': 'du gamla, du fria 16', 'id': 'song16'}, 
+{'search': 'kungsången 17', 'id': 'song17'}, 
+{'search': 'studentsången 18', 'id': 'song18'}, 
+{'search': 'än en gång däran 19', 'id': 'song19'}, 
+{'search': 'nu grönskar det 20', 'id': 'song20'}, 
+{'search': 'fredmans epistel no 21 21', 'id': 'song21'}, 
+{'search': 'samling vid pumpen 22', 'id': 'song22'}, 
+{'search': 'stockholm i mitt hjärta 23', 'id': 'song23'}, 
+{'search': 'bort allt vad oro gör 24', 'id': 'song24'}, 
+{'search': 'o, helga öl och bulle 25', 'id': 'song25'}, 
+{'search': 'ode till øhlset 26', 'id': 'song26'}, 
+{'search': 'bira, bärs 27', 'id': 'song27'}, 
+{'search': 'min pilsner 28', 'id': 'song28'}, 
+{'search': 'ju mer öl vi dricker 29', 'id': 'song29'}, 
+{'search': 'jag har aldrig var&#39;t på snusen 30', 'id': 'song30'}, 
+{'search': 'en kul en 31', 'id': 'song31'}, 
+{'search': 'öl, öl, öl i glas 32', 'id': 'song32'}, 
+{'search': 'en pilsnerdrickare 33', 'id': 'song33'}, 
+{'search': 'strejk på prips 34', 'id': 'song34'}, 
+{'search': 'var nöjd med ölen 35', 'id': 'song35'}, 
+{'search': 'avskedssång till pilsnern 36', 'id': 'song36'}, 
+{'search': 'feta fransyskor 37', 'id': 'song37'}, 
+{'search': 'imsig vimsig 38', 'id': 'song38'}, 
+{'search': 'lyft ditt välförsedda glas 39', 'id': 'song39'}, 
+{'search': 'spegelvisa 40', 'id': 'song40'}, 
+{'search': 'bordeaux, bordeaux 41', 'id': 'song41'}, 
+{'search': 'samla er kamrater 42', 'id': 'song42'}, 
+{'search': 'hyfsvisa 43', 'id': 'song43'}, 
+{'search': 'vinet gör människan 44', 'id': 'song44'}, 
+{'search': 'vid din sida 45', 'id': 'song45'}, 
+{'search': 'du gamla du fina du årsgångna vin 46', 'id': 'song46'}, 
+{'search': 'helan 47', 'id': 'song47'}, 
+{'search': 'halvan 48', 'id': 'song48'}, 
+{'search': 'tersen 49', 'id': 'song49'}, 
+{'search': 'quarten 50', 'id': 'song50'}, 
+{'search': 'quinten 51', 'id': 'song51'}, 
+{'search': 'sexten 52', 'id': 'song52'}, 
+{'search': 'septen 53', 'id': 'song53'}, 
+{'search': 'bal på slottet 54', 'id': 'song54'}, 
+{'search': 'satans tårar 55', 'id': 'song55'}, 
+{'search': 'om jag hade brännvin 56', 'id': 'song56'}, 
+{'search': 'spritbolaget 57', 'id': 'song57'}, 
+{'search': 'sinnena vinner 58', 'id': 'song58'}, 
+{'search': 'när gäddorna leker 59', 'id': 'song59'}, 
+{'search': 'det var en gång en helan-går-a-katt 60', 'id': 'song60'}, 
+{'search': 'bägaren 61', 'id': 'song61'}, 
+{'search': 'ett mystiskt försvinnande 62', 'id': 'song62'}, 
+{'search': 'gräv ur tundran 63', 'id': 'song63'}, 
+{'search': 'kom överste 64', 'id': 'song64'}, 
+{'search': 'mitt lilla lån 65', 'id': 'song65'}, 
+{'search': 'livet är härligt 66', 'id': 'song66'}, 
+{'search': 'alla måste känna till 67', 'id': 'song67'}, 
+{'search': 'vikingen 68', 'id': 'song68'}, 
+{'search': 'feministvikingen 69', 'id': 'song69'}, 
+{'search': 'alla tallarna 70', 'id': 'song70'}, 
+{'search': 'vi dricka, vi dricka... 71', 'id': 'song71'}, 
+{'search': 'utvandrarna 72', 'id': 'song72'}, 
+{'search': 'imbelupet 73', 'id': 'song73'}, 
+{'search': 'vintern rasat över media 74', 'id': 'song74'}, 
+{'search': 'punschen kommer (kall) 75', 'id': 'song75'}, 
+{'search': 'punschen kommer (varm) 76', 'id': 'song76'}, 
+{'search': 'punschen 77', 'id': 'song77'}, 
+{'search': 'när punschen vandrat hädan 78', 'id': 'song78'}, 
+{'search': 'punsch är förskräckligt 79', 'id': 'song79'}, 
+{'search': 'tentaförberedelser 80', 'id': 'song80'}, 
+{'search': 'studiemedelsrondo 81', 'id': 'song81'}, 
+{'search': 'lilla punschvisan 82', 'id': 'song82'}, 
+{'search': 'djungelpunsch 83', 'id': 'song83'}, 
+{'search': 'klafsa i punsch 84', 'id': 'song84'}, 
+{'search': 'punsch, punsch filibom 85', 'id': 'song85'}, 
+{'search': 'nu har vi punsch 86', 'id': 'song86'}, 
+{'search': 'tucks punschvisa 87', 'id': 'song87'}, 
+{'search': 'sista punschvisan 88', 'id': 'song88'}, ];
+
+function decipher(text, salt) {
+    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+   
+    return text.match(/.{1,2}/g)
+      .map(hex => parseInt(hex, 16))
+      .map(applySaltToChar)
+      .map(charCode => String.fromCharCode(charCode))
+      .join('');
+}
+
+function cipher(text, salt) {
+    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+    const byteHex = n => ("0" + Number(n).toString(16)).substr(-2);
+    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+
+    return text.split('')
+      .map(textToChars)
+      .map(applySaltToChar)
+      .map(byteHex)
+      .join('');
+}
+
+thetho_7569646e63606d65 = 'b69dd39e929dd3809c9ed39b96878796d3a7969c91929f97d3a79c81f99b929dd3859281d3969dd380989a90989f9a94d387929e9186819e92999c81ddf9a08690901a9dd39b929dd394999c819796d3859281d3929f9f879a97d380879c81f9950581d39b929dd3809d86818192d39c909bd38085179d949796d3809a9dd3988698ddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9b69dd3979294d3949a9098d3a7969c91929f97d38687d3969dd38087869d97f9950581d3928787d39416d3950581d3809a94d38099179f85d39ad3969dd39f869e9e9a94d39f869d97ddf9bb929dd39e05878796d3969dd3800587d39f9a87969dd397929ed39e9697d3809a9dd39b869d97f9809c9ed3801694d39d1781d39b929dd38085179d949796d3809a9dd3988698f9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9bc909bd3a7969c91929f97d383819c8592d3968787d387819a9098d39b929dd39f178187f99b929dd3809f1783838796d3809a9dd39f969ed39e9697d3969dd398819295879a94d3809d178187f99ad39b86859687d38316d39b869d97969dd3809c9ed392859f9697d38785178187f99d1781d39b929dd3809d86818192d39c909bd38085179d949796d3809a9dd3988698ddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9be969dd397929e969dd39b9c9dd3919f9685d39b969f87d391968087058187f99b9c9dd38098819698d39c909bd380859c81d39d1687d39c96819b058187f98016d3979687d3859281d39a9d94969dd39f8a90989297d3959f9a8187f9928787d3809d86818192d39c909bd38085179d9492d3809a9dd3988698ddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9a316d39481869d97d39285d397929e969d80d392819492d3949d179f9ff99b929dd3929d9b059f9f80d3819697929dd380929e9e92d39885179f9ff99c909bd3809287879680d39ad3969dd3969d80929e90969f9ff9928787d3809d86818192d39c909bd38085179d9492d3809a9dd3988698ddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9bd1781d39e169f9687d3989c9ed39ad381178787969dd39c8383f98092d316989f929492819dd3eb979687d3951681d38592d380879c8383f99e929dd3951681d39699d3859a958792d39e9697d3809a9dd3809d9c8383f99c909bd3809d86818192d39c909bd38085179d9492d3809a9dd3988698eaddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9be969dd3979c9e92819dd39b929dd3859281d3879c9f9681929d87f99b929dd38092d3eb8099179f85d3940581d3999294d39f9a989297929d87f9999294d3878a90989681d3979687d31781d39a9d8781968080929d87f9928787d3809d86818192d39c909bd38085179d9492d39e9a9dd3988698eaddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9a016d3a7969c91929f97d39b929dd3809f178383879680d395819af99c909bd39f9a98809c9ed3979c9e92819dd3878a90989681d3859af9928787d3879996999681d39d9ad3809892d380989a8792d39af99c9ed3859ad3809d8681819281d39c909bd38085179d949681d3851681d3988698ddf9f9b79687d3859281d3969dd380879c81d3988698f99f169d94dfd398819295879a94d39c909bd387869d94ddf9b581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f9859281d397969dd3878196d3958a8192d3959c87f99e9697d3969dd39e9697969f80879c81d3818a949480179098d3879a9f9fd383869d94ddf9f9b50581d3859ad39b9281d3969dd380879c81d3988698f99f169d94d398819295879a94d39c909bd387869d94f99581169dd397968080d3879c8383d3879a9f9fd397968080d3819c87f91781d397969dd3a0b9a6d336a7a7b2d3959c87f99e9697d3969dd3b937a7a7b6a0a7bca1d3818a949480179098d3879a9f9fd383869d94dd';
+the_exists = false;
+
+function search() {
+    var input = document.getElementById('searchbar').value.toLowerCase();
+
+    if (!the_exists && input[0] == 'o' && cipher(input, "Extrem_Il") == '2628273a3dad272d202e3d'){
+        // Decipher at own risk
+        var div_constr = "<div>                                        <input id='check-1' type='checkbox'/>                                         <label for='check-1'>" + decipher('a79b969c91929f97d3a79b9c81', input) +"</label>                                         <div class='submenu' id = 'drop-1'>                                         <p> <pre>" + decipher(thetho_7569646e63606d65, input) + " </pre> </p>                                         </div>                                     </div>";
+        document.body.innerHTML +=  div_constr;
+        the_exists = true;
+    }
+
+    var i=0;
+    var pos=-1;
+
+    for(i=0; i<num_of_songs; i++) { 
+        pos= terms[i]['search'].indexOf(input);
+        
+        if(pos == -1){
+            document.getElementById(terms[i]['id']).style.display = "none";
+        }
+        else{
+            document.getElementById(terms[i]['id']).style.display = "block";
+        }
+        pos=-1;
+    }
+}
+
+</script>
+
+</head>
+<body>
+    <input id="searchbar" type="text" value="Sök sång" onclick="this.value='';" onkeyup="search();">
+    
+    <div id = "song1">
+        <input id="check1" type="checkbox"/>
+        <label for="check1">1 &emsp; Portos Visa</label>
+        <div class="submenu" id = "drop1">
+        <p> <b>Melodi: <b>Annie get your gun </p>
+        <p>Jag vill börja gasqua, var fan är min flaska, vem
+<br>i helvete stal min butelj?
+<br>Skall törsten mig tvinga, en TT börja svinga,
+<br>nej, för fan, bara blunda och svälj!
+<br>Vilken smörja, får jag spörja,
+<br>vem för fan tror att jag är en älg?
+<br>Till England vi rider och sedan vad det lider,
+<br>träffar vi välan på någon pub.
+<br>Och där skall vi festa, blott dricka av det bästa
+<br>utav whisky och portvin, ja’ tänker gå hårt in
+<br>för att smaka på rubb och stubb!</p>
+        </div>
+    </div>
+
+    <div id = "song2">
+        <input id="check2" type="checkbox"/>
+        <label for="check2">2 &emsp; Det var i vår ungdom</label>
+        <div class="submenu" id = "drop2">
+        <p>  </p>
+        <p>Det där det gjorde de/hon/han fan så bra
+<br>En skål uti botten för dem/henne/honom nu vi ta
+<br>Och alla så dricka vi nu ~ namn ~ till.
+<br>
+<br> ~ namn ~ : Och ~ namn ~ säger inte nej därtill!
+<br>För det var i vår ungdoms fagraste vår
+<br>Vi drack varandra till och vi sade “Gutår!”</p>
+        </div>
+    </div>
+
+    <div id = "song3">
+        <input id="check3" type="checkbox"/>
+        <label for="check3">3 &emsp; Stackars Teknis</label>
+        <div class="submenu" id = "drop3">
+        <p> <b>Text: <b>Sångargasquen 1999 &emsp; <b>Melodi: <b>Styrman Karlsson </p>
+        <p>Stackars gamla Teknis hade otur.
+<br>Tiden gick och man hann inte med.
+<br>Nya villkor anföll i en störtskur.
+<br>Broar brast och ygplan ramla ned.
+<br>Då kom en klass som hette Media.
+<br>Nu kunde Teknis komma loss.
+<br>Så lämna gruvan och er smedja.
+<br>Den nya tiden leds av oss.
+<br>
+<br>Teknis hade glömt kommunicera.
+<br>Det får man ju inte låta bli.
+<br>Vem ska skapa denna nya era
+<br>och utveckla ny telefoni?
+<br>Jo, det ska vi som heter Media.
+<br>Vi är det bästa som har skett.
+<br>För hållfastheten i en kedja
+<br>den måste presenteras rätt.</p>
+        </div>
+    </div>
+
+    <div id = "song4">
+        <input id="check4" type="checkbox"/>
+        <label for="check4">4 &emsp; Kalmarevisan</label>
+        <div class="submenu" id = "drop4">
+        <p> <b>Melodi: <b>Traditionell </p>
+        <p>SångLedare: Uti Kalmare stad
+<br>Alla: Ja där finns det ingen kvast
+<br>SL: För uti Kalmare stad
+<br>A: Ja där finns det ingen kvast
+<br>förrän lördagen.
+<br>SL: Hej Dick!
+<br>A: Hej Dack!
+<br>SL: Jag slog i
+<br>A: och vi drack.
+<br>SL: Hej dickom dickom dack!
+<br>A: Hej dickom dickom dack!
+<br>För uti Kalmare stad
+<br>ja, där finns det ingen kvast
+<br>förrän lördagen.
+<br>
+<br>SL: När som bonden kommer hem
+<br>A: Kommer bondekvinnan ut
+<br>SL: Ja, när som bonden kommer hem
+<br>A: Kommer bondekvinnan ut,
+<br>hon är stor i sin trut.
+<br>SL: Hej Dick...
+<br>
+<br>SL: Var är pengarna du fått?
+<br>A: Jo de har jag supit upp
+<br>SL: Var är pengarna du fått?
+<br>A: Jo de har jag supit upp,
+<br>Upp på Kalmare slott!
+<br>SL: Hej Dick...
+<br>
+<br>SL: Jag skall mäla dig an
+<br>A: för vår kronbefallningsman!
+<br>SL: Ja, jag skall mäla dig an
+<br>A: för vår kronbefallningsman,
+<br>och du ska få skam!
+<br>SL: Hej Dick...
+<br>
+<br>SL: Kronbefallningsmannen vår
+<br>A: Satt på krogen igår
+<br>SL: Kronbefallningsmannen vår
+<br>A: Satt på krogen igår,
+<br>och var full som ett får!
+<br>SL: Hej Dick...</p>
+        </div>
+    </div>
+
+    <div id = "song5">
+        <input id="check5" type="checkbox"/>
+        <label for="check5">5 &emsp; Dance Macabre</label>
+        <div class="submenu" id = "drop5">
+        <p> <b>Melodi: <b>Vårvindar friska </p>
+        <p>Runt kring vår stuga smådjävlar sluga
+<br>dansa så tyst med bockfot och svans
+<br>Varulvar yla, isande kyla,
+<br>sveper i dimman fanstygets dans.
+<br>Bäva, o broder, lyssna och hör
+<br>vrålen från gast som osalig dör.
+<br>Satan han skrattar, fattar om flaskan,
+<br>super till dagen gryr.
+<br>
+<br>~ sjunges piano:
+<br>Gastar och spöken skymta i kröken,
+<br>döingar släpar ruttnande lik.
+<br>Benrangel skramla, spökhänder famla,
+<br>kväver din strupes rosslande skrik.
+<br>
+<br>~ sjunges forte:
+<br>Helvetets alla fasor släppts loss,
+<br>Fan rider här med hela sin tross.
+<br>Göm dig i stugan, du har fått flugan,
+<br>dille det blir din lott.</p>
+        </div>
+    </div>
+
+    <div id = "song6">
+        <input id="check6" type="checkbox"/>
+        <label for="check6">6 &emsp; När jag är fuller</label>
+        <div class="submenu" id = "drop6">
+        <p> <b>Melodi: <b>När månen vandrar på fästet blå </p>
+        <p>När jag är fuller då är jag glad,
+<br>fan vet om jag ej är vacker.
+<br>Jag vandrar kring i vår lilla stad,
+<br>ibland lyxhus och baracker.
+<br>Jag sjunger ljuvligt en serenad,
+<br>det gör jag bara när jag är glad
+<br>och full och vacker, och full och vacker.
+<br>
+<br>När jag är fuller då är jag stark,
+<br>fan vet om jag ej är modig.
+<br>Då kan jag slå vem som helst i mark,
+<br>så han blir trasig och blodig.
+<br>Jag välter träden i våran park,
+<br>det gör jag bara när jag är stark
+<br>och full och modig, och full och modig.
+<br>
+<br>När jag är fuller då är jag rik,
+<br>fan vet om jag ej är snille.
+<br>Och dör jag blir jag ett vackert lik,
+<br>begravs med gravöl och gille.
+<br>I himlen möts jag av hornmusik,
+<br>det gör man bara när man är rik
+<br>och är ett snille, och är ett snille.
+<br>
+<br>Men när jag vaknar upp nästa dag,
+<br>uppå ett enkelrum med galler.
+<br>Då känner jag mig så rysligt svag,
+<br>och hatar bråk och kravaller.
+<br>Min mage krånglar och är ur lag,
+<br>nog fan så vet jag att jag idag
+<br>är bakom galler, är bakom galler.</p>
+        </div>
+    </div>
+
+    <div id = "song7">
+        <input id="check7" type="checkbox"/>
+        <label for="check7">7 &emsp; Système Internationale</label>
+        <div class="submenu" id = "drop7">
+        <p> <b>Melodi: <b>Studentsången </p>
+        <p>W kg m Wb s
+<br>&Omega;m T A rad
+<br>Cd Sv N s
+<br>&Omega;A m Lx dB
+<br>°C W/m&sup2;
+<br>J/kg H V C
+<br>kg/m&sup3; mol
+<br>m/s&sup2;
+<br>m/s&sup2;
+<br>F</p>
+        </div>
+    </div>
+
+    <div id = "song8">
+        <input id="check8" type="checkbox"/>
+        <label for="check8">8 &emsp; Mediehymnen</label>
+        <div class="submenu" id = "drop8">
+        <p> <b>Text: <b>Sånglederiet 2004 &emsp; <b>Melodi: <b>Te Deum (a.k.a Nobelsången) </p>
+        <p>För Teknis mitt hjärta blöda,
+<br>på Campus jag känner en stolthet såsom få
+<br>för byggnader tegelröda
+<br>och gräs och himmel, gröna, blå.
+<br>O, ljuva ambrosia, nektar
+<br>för själen och sinnet på vår akademi
+<br>är du, och mitt hjärta smäktar
+<br>och älskar medieteknik.</p>
+        </div>
+    </div>
+
+    <div id = "song9">
+        <input id="check9" type="checkbox"/>
+        <label for="check9">9 &emsp; Sång för Medieteknik</label>
+        <div class="submenu" id = "drop9">
+        <p> <b>Text: <b>Sånglederiet 2009 &emsp; <b>Melodi: <b>Kungsången </p>
+        <p>En medietekniker så stolt
+<br>sitt huvud alltid högt hon bär
+<br>var helst hon visar sig
+<br>Vi kommer aldrig svika dig
+<br>är alltid trogna vår sektion
+<br>för du i våra hjärtan bor
+<br>vi aldrig lämnar dig</p>
+        </div>
+    </div>
+
+    <div id = "song10">
+        <input id="check10" type="checkbox"/>
+        <label for="check10">10 &emsp; Mediemarshen</label>
+        <div class="submenu" id = "drop10">
+        <p> <b>Melodi: <b>Monty Python </p>
+        <p>Vi kommer i marsch från medieteknik
+<br>Ingen sektion på campus är vår lik
+<br>Med blod, med svett och med tårar fram vi gå
+<br>På Media vi alltid målet nå</p>
+        </div>
+    </div>
+
+    <div id = "song11">
+        <input id="check11" type="checkbox"/>
+        <label for="check11">11 &emsp; Mamma Media</label>
+        <div class="submenu" id = "drop11">
+        <p> <b>Melodi: <b>Mamma Mia </p>
+        <p>Jag har letat en väg, söker ett ideal
+<br>Allt jag funnit, tills nu, har varit katastrofalt
+<br>Vad gör jag nu? Vad ska jag ta mig till?
+<br>Vart ska jag gå? Vart finns hunksen på KTH?
+<br>Det kan jag ej förstå
+<br>För Fysik de var ju inget att ha
+<br>Och Kemi var heller alls inge’ bra
+<br>
+<br>Där är Media, se där går de nu
+<br>Åh jag vill att de ska stanna
+<br>De på Media, de är original
+<br>Inte, alls som alla andra
+<br>Åh, deras ögon blänker
+<br>Jag vill veta vad de tänker
+<br>Nån gång, kanske jag kan bli som dom</p>
+        </div>
+    </div>
+
+    <div id = "song12">
+        <input id="check12" type="checkbox"/>
+        <label for="check12">12 &emsp; Jag vill va som du</label>
+        <div class="submenu" id = "drop12">
+        <p> <b>Text: <b>Gabriella Dalman, Martin Lindberg &emsp; <b>Melodi: <b>Jag vill va som du </p>
+        <p>Jag kungen över adobe är
+<br>Grafk, det är min grej
+<br>Min frontend är ju snyggast här
+<br>men koden knasar sig
+<br>Jag drömmer om att bli en datalog
+<br>och tänka helt i kod
+<br>Så hör min bön och ge mig lön
+<br>För ni har ju faktiskt råd
+<br>
+<br>Obidoo jag vill ju va som du
+<br>Jag vill va rik som du, skriva kod som du, duuu
+<br>Det vill jag nu
+<br>En median som jag, vill lära mig bli en datalog!
+<br>
+<br>Mästaren av alla språk
+<br>som Java, Pearl och C
+<br>Från salt och hash till git och bash
+<br>Men jag vill va någons sked
+<br>Tänk om jag var en median
+<br>med gra sk kompetens
+<br>Med frack och stil, en snygg pro l
+<br>Jag vill veta hur det känns
+<br>
+<br>Obidoo jag vill ju va som du
+<br>Följa en trend som du, designa webb som du, duuu.
+<br>Det vill jag nu
+<br>En datalog som jag, vill lära mig bli en median!</p>
+        </div>
+    </div>
+
+    <div id = "song13">
+        <input id="check13" type="checkbox"/>
+        <label for="check13">13 &emsp; Medias Visa</label>
+        <div class="submenu" id = "drop13">
+        <p> <b>Text: <b>Sånglederiet 2013 &emsp; <b>Melodi: <b>Åh, hur saligt att få vandra </p>
+        <p>Jag vill aldrig gå på media
+<br>Hipstertöntar är dom allesammans
+<br>Dom kan inte programmera
+<br>Hackar pseudokod i rosa ComicSans
+<br>Dom läser heller inte Hållfen
+<br>Man blir knappt en riktig ingenjör
+<br>För vetenskapen är dom lekmän
+<br>All teknik dom kan är kamerans interiör
+<br>
+<br>Medieteknik - så magnifik
+<br>Medieteknik - är ren komik
+<br>Medieteknik - orsakar smärta och tragik
+<br>
+<br>Medieteknik - så magnifik
+<br>Medieteknik - är ren komik
+<br>Medieteknik - är skäl att drabbas av panik
+<br>
+<br>Äpplen slåss mot Androider
+<br>Media lider utav borderline
+<br>Baren säljer bara cider
+<br>Skriver ProInt-reflektion i InDesign
+<br>Dom tävlar i att kugga tentor
+<br>Standard är individuell kursplan
+<br>Intetsägande små männ’skor
+<br>Därför går de under namnet “Median”
+<br>
+<br>Medieteknik...</p>
+        </div>
+    </div>
+
+    <div id = "song14">
+        <input id="check14" type="checkbox"/>
+        <label for="check14">14 &emsp; Minnen för livet</label>
+        <div class="submenu" id = "drop14">
+        <p> <b>Text: <b>Sånglederiet 2011 &emsp; <b>Melodi: <b>Original </p>
+        <p>Efter tre års längtan
+<br>vår väntan är över
+<br>en undanmanöver
+<br>från plugget där hemma
+<br>
+<br>Dags att kavla upp ärmen
+<br>svetsar järnspik och sågar
+<br>kom fram om ni vågar
+<br>se solen bränna
+<br>
+<br>Det stundas för fest
+<br>men desperata vi säljer
+<br>brux för en femma
+<br>
+<br>||: Äntligen har stunden kommit
+<br>för
+<br>Quarneval
+<br>minnen för livet
+<br>öl, fest och solsken är våra ideal
+<br>skadad för livet :||
+</p>
+        </div>
+    </div>
+
+    <div id = "song15">
+        <input id="check15" type="checkbox"/>
+        <label for="check15">15 &emsp; Partydags</label>
+        <div class="submenu" id = "drop15">
+        <p> <b>Text: <b>Metaspexet 2019 &emsp; <b>Melodi: <b>September </p>
+        <p>Så hur går maten?
+<br>Ta bara de naste faten.
+<br>Säg,var la jag nu rakapparaten?
+<br>Seså,ingenting får gå fel
+<br>
+<br>Jag tog en bulle
+<br>Är så hungrig, hann ej äta frulle
+<br>Det gör ingenting alls
+<br>Min herre, se nu fram mot en magisk kväll
+<br>
+<br>För det är
+<br>Partydags, så mycket att fixa.
+<br>Partydags, fördrinkar att mixa.
+<br>Partydags, allting måste va perfekt
+<br>
+<br>Tänk så välsignat att få umgås med vänner
+<br>mer äni bikten där allt är vad de känner
+<br>Hoppas de bjuder, på nått gott ikväll
+<br>
+<br>För det är
+<br>Partydags, så mycket att fixa.
+<br>Partydags, fördrinkar att mixa.
+<br>Partydags, allting måste va perfekt</p>
+        </div>
+    </div>
+
+    <div id = "song16">
+        <input id="check16" type="checkbox"/>
+        <label for="check16">16 &emsp; Du gamla, du fria</label>
+        <div class="submenu" id = "drop16">
+        <p> <b>Text: <b>Richard Dybeck &emsp;  </p>
+        <p>Du gamla, Du fria, Du fjällhöga nord
+<br>Du tysta, Du glädjerika sköna!
+<br>Jag hälsar Dig, vänaste land uppå jord,
+<br>||: Din sol, Din himmel, Dina ängder gröna. :||
+<br>
+<br>Du tronar på minnen från fornstora dar,
+<br>då ärat Ditt namn flög över jorden.
+<br>Jag vet att Du är och Du blir vad du var.
+<br>||: Ja, jag vill leva jag vill dö i Norden. :||</p>
+        </div>
+    </div>
+
+    <div id = "song17">
+        <input id="check17" type="checkbox"/>
+        <label for="check17">17 &emsp; Kungsången</label>
+        <div class="submenu" id = "drop17">
+        <p> <b>Text: <b>Talis Qualis &emsp; <b>Melodi: <b>Otto Lindblad </p>
+        <p>Ur svenska hjärtans djup en gång
+<br>en samfälld och en enkel sång,
+<br>som går till Kungen fram!
+<br>Var Honom trofast och Hans ätt,
+<br>gör kronan på Hans hjässa lätt,
+<br>och all din tro till Honom sätt,
+<br>du folk av frejdad stam!</p>
+        </div>
+    </div>
+
+    <div id = "song18">
+        <input id="check18" type="checkbox"/>
+        <label for="check18">18 &emsp; Studentsången</label>
+        <div class="submenu" id = "drop18">
+        <p> <b>Text: <b>Herman Sätherberg &emsp;  </p>
+        <p>Sjung om studentens lyckliga dag,
+<br>låtom oss fröjdas i ungdomens vår!
+<br>Än klappar hjärtat med friska slag,
+<br>och den ljusnande framtid är vår.
+<br>Inga stormar än i våra sinnen bo,
+<br>hoppet är vår vän och vi dess löften tro,
+<br>när vi knyta förbund i den lund,
+<br>där de härliga lagrarna gro,
+<br>där de härliga lagrarna gro
+<br>Hurra!</p>
+        </div>
+    </div>
+
+    <div id = "song19">
+        <input id="check19" type="checkbox"/>
+        <label for="check19">19 &emsp; Än en gång däran</label>
+        <div class="submenu" id = "drop19">
+        <p> <b>Text: <b>Evert Taube &emsp;  </p>
+        <p>Än en gång däran, bröder,
+<br>Än en gång däran
+<br>Följom den urgamla seden
+<br>In till sista man, bröder,
+<br>In till sista man
+<br>Trotsa vi hatet och vreden!
+<br>Blankare vapen sågs aldrig i en här
+<br>Än dessa glasen, kamrater: I gevär!
+<br>Än en gång däran, bröder,
+<br>Än en gång däran!
+<br>Ur svenska hjärtans djup:
+<br>Här är din sup!
+<br>
+<br>Livet är så kort, bröder,
+<br>Livet är så kort.
+<br>Lek det ej bort, nej var redo.
+<br>Kämpa mot allt torrt, bröder,
+<br>Kämpa mot allt torrt!
+<br>Tänk på de gamla som skredo
+<br>Fram utan tvekan i floder av champagne
+<br>Styrkta från början av brännvin från vårt land.
+<br>Kämpa mot allt torrt, bröder,
+<br>Kämpa mot allt torrt!
+<br>Ur svenska hjärtans djup:
+<br>Här är din sup</p>
+        </div>
+    </div>
+
+    <div id = "song20">
+        <input id="check20" type="checkbox"/>
+        <label for="check20">20 &emsp; Nu grönskar det</label>
+        <div class="submenu" id = "drop20">
+        <p> <b>Text: <b>Evelyn Lindström &emsp; <b>Melodi: <b>JS Bach </p>
+        <p>Nu grönskar det i dalens famn
+<br>nu doftar äng och lid.
+<br>Kom med, kom med på vandringsfärd
+<br>i vårens glada tid!
+<br>Var dag är som en gyllne skål
+<br>till bredden fylld med vin.
+<br>Så drick min vän, drick sol och doft,
+<br>ty dagen, den är din!
+<br>Långt bort från stadens gråa hus
+<br>vi glatt vår kosa styr
+<br>och följer vägens vita band
+<br>mot ljusa äventyr.
+<br>Med öppna ögon låt oss se
+<br>på livets rikedom,
+<br>som gror och sjuder överallt
+<br>där våren går i blom!</p>
+        </div>
+    </div>
+
+    <div id = "song21">
+        <input id="check21" type="checkbox"/>
+        <label for="check21">21 &emsp; Fredmans epistel no 21</label>
+        <div class="submenu" id = "drop21">
+        <p> <b>Text: <b>Carl Michael Bellman &emsp;  </p>
+        <p>Så lunka vi så småningom
+<br>Från Bacchi buller och tumult,
+<br>När döden ropar, Granne kom,
+<br>Ditt timglas är nu fullt.
+<br>Du Gubbe fäll din krycka ner,
+<br>Och du, du Yngling, lyd min lag,
+<br>Den skönsta Nymf som åt dig ler
+<br>In under armen tag.
+<br>
+<br>Tycker du att grafven är för djup,
+<br>Nå välan så tag dig då en sup,
+<br>Tag dig sen dito en, dito två, dito tre,
+<br>Så dör du nöjdare.
+<br>
+<br>Säg är du nöjd? min granne säg,
+<br>Så prisa värden nu till slut;
+<br>Om vi ha en och samma väg,
+<br>Så följoms åt; drick ut.
+<br>Men först med vinet rött och vitt
+<br>För vår Värdinna bugom oss,
+<br>Och halkom sen i graven fritt,
+<br>Vid aftonstjärnans bloss.
+<br>
+<br>Tycker du att...</p>
+        </div>
+    </div>
+
+    <div id = "song22">
+        <input id="check22" type="checkbox"/>
+        <label for="check22">22 &emsp; Samling vid pumpen</label>
+        <div class="submenu" id = "drop22">
+        <p> <b>Melodi: <b>Hujeda mig sånt' barn ha va' </p>
+        <p>Samling nu vid pumpen alla ni som
+<br>vill ha vatten.
+<br>Vi som dricker brännvin vi
+<br>höjer våra glas
+<br>Vatten ska man ha när man ska
+<br>vattna i rabatten
+<br>Brännvin ska man ha när man
+<br>e på KALAAAS!</p>
+        </div>
+    </div>
+
+    <div id = "song23">
+        <input id="check23" type="checkbox"/>
+        <label for="check23">23 &emsp; Stockholm i mitt hjärta</label>
+        <div class="submenu" id = "drop23">
+        <p> <b>Text: <b>Lasse Berghagen &emsp;  </p>
+        <p>Stockholm i mitt hjärta,
+<br>låt mig besjunga dig nu,
+<br>åldrad i ungdomlig grönska,
+<br>öarnas stad, det är du!
+<br>Av städer jag känner i världen
+<br>är du den stad som fått allt.
+<br>Genom Mälarens kärlek till havet
+<br>en blandning av sött och salt.</p>
+        </div>
+    </div>
+
+    <div id = "song24">
+        <input id="check24" type="checkbox"/>
+        <label for="check24">24 &emsp; Bort allt vad oro gör</label>
+        <div class="submenu" id = "drop24">
+        <p> <b>Text: <b>Carl Michael Bellman &emsp;  </p>
+        <p>Bort allt vad oro gör,
+<br>bort allt vad hjärtat kväljer!
+<br>Bäst att man väljer bland dessa buteljer,
+<br>sin maglikör.
+<br>||: Granne! Gör du just som jag gör,
+<br>vet denna olja ger humör.
+<br>Vad det var läckert!
+<br>Vad var det? Rehnskt Bläckert?
+<br>Oui, mon seigneur. :||
+<br>
+<br>Bort allt vad oro gör,
+<br>allt är ju stoft och aska.
+<br>Låt oss bli raska
+<br>och tömma vår flaska
+<br>bland brödernee.
+<br>||: Granne! Gör du just som jag gör,
+<br>vet denna olja ger humör.
+<br>Vad det var mäktigt!
+<br>Vad var det?... Jo, präktigt,
+<br>Malaga - Ja. :||</p>
+        </div>
+    </div>
+
+    <div id = "song25">
+        <input id="check25" type="checkbox"/>
+        <label for="check25">25 &emsp; O, Helga Öl och Bulle</label>
+        <div class="submenu" id = "drop25">
+        <p> <b>Text: <b>Sånglederiet 2009 &emsp; <b>Melodi: <b>O, helga natt </p>
+        <p>O, Helga öl
+<br>O, Medelstora bulle
+<br>O, som ni mättar och lindrar min törst
+<br>Djupt i mitt svalg, så mötas era smaker
+<br>och skapar kärlek och tröst i harmoni
+<br>Då ölens beska skummar över bullen
+<br>och bullens sötma kittlar till min öl
+<br>Ölen i glaset
+<br>I handen höj nu bullen
+<br>O, Helga öl - ditt sällskap är totalt!
+<br>O, Öl och Bulle
+<br>Ett frändskap optimalt!</p>
+        </div>
+    </div>
+
+    <div id = "song26">
+        <input id="check26" type="checkbox"/>
+        <label for="check26">26 &emsp; Ode till Øhlset</label>
+        <div class="submenu" id = "drop26">
+        <p> <b>Melodi: <b>trampa på gasen </p>
+        <p>Tu tu tu Tuborg
+<br>och ca ca ca Carlsberg
+<br>det är den bästa
+<br>pi pi pi pilsnern som jag vet
+<br>
+<br>Tu tu tu Carlsberg
+<br>och ca ca ca Tuborg
+<br>det är det bästa
+<br>pi pi pi ölet som jag vet
+<br>
+<br>Tu tu tu Ölberg
+<br>och ca ca ca Pilsborg
+<br>det är den bästa
+<br>pi pi pi biran som jag vet!
+<br>
+<br>Tu ca pi Ölsner och
+<br>pi tu ca bira
+<br>//: det är den bästa ca pi tu lering :// som jag gjort.
+</p>
+        </div>
+    </div>
+
+    <div id = "song27">
+        <input id="check27" type="checkbox"/>
+        <label for="check27">27 &emsp; Bira, bärs</label>
+        <div class="submenu" id = "drop27">
+        <p>  </p>
+        <p>SångLedare: Bira bira bira
+<br>Alla: Bärs bärs bärs
+<br>SL: Bira
+<br>A: Bärs
+<br>SL: Bira
+<br>A: Bärs</p>
+        </div>
+    </div>
+
+    <div id = "song28">
+        <input id="check28" type="checkbox"/>
+        <label for="check28">28 &emsp; Min pilsner</label>
+        <div class="submenu" id = "drop28">
+        <p> <b>Melodi: <b>My Bonnie </p>
+        <p>Min pilsner skall svalka min tunga.
+<br>Min pilsner skall duscha min gom.
+<br>Min pilsner skall få mig att sjunga,
+<br>om jag ser att flaskan är tom:
+<br>Pilsner! Pilsner!
+<br>Hämta en pilsner till mig, till mig.
+<br>Pilsner! Pilsner!
+<br>Hämta en pilsner till mig!</p>
+        </div>
+    </div>
+
+    <div id = "song29">
+        <input id="check29" type="checkbox"/>
+        <label for="check29">29 &emsp; Ju mer öl vi dricker</label>
+        <div class="submenu" id = "drop29">
+        <p> <b>Melodi: <b>Ju mer vi är tillsammans </p>
+        <p>Ju mera öl vi dricker, vi dricker, vi dricker
+<br>ju mera öl vi dricker, ju rundare vi bli,
+<br>för rundare är sundare
+<br>och sundare är rundare
+<br>ju mera öl vi dricker, ju rundare vi bli.</p>
+        </div>
+    </div>
+
+    <div id = "song30">
+        <input id="check30" type="checkbox"/>
+        <label for="check30">30 &emsp; Jag har aldrig var&#39;t på snusen</label>
+        <div class="submenu" id = "drop30">
+        <p> <b>Melodi: <b>Oh hur saligt att få vandra </p>
+        <p>Jag har aldrig var´t på snusen,
+<br>Aldrig har jag rökat en cigarr, halleluja.
+<br>Mina dygder äro tusen,
+<br>Inga syndiga laster jag har.
+<br>Jag har aldrig sett nått naket,
+<br>Inte ens ett litet nyfött barn.
+<br>Mina blickar går mot taket,
+<br>Därmed undgår jag frestarens garn
+<br>
+<br>||:Halleluja - halleluja!
+<br>Halleluja - halleluja!
+<br>Halleluja - halleluja!
+<br>Halleluja-aa-aa :||
+<br>
+<br>Bacchus spelar på gitarren,
+<br>Satan spelar på sitt handklaver.
+<br>Alla djävlar dansar tango,
+<br>Säg vad kan man väl önska sig mer.
+<br>JO, att alla bäckar vore brännvin,
+<br>Gasqueparksdammen fylld med bayersk öl.
+<br>Konjak i varenda rännsten,
+<br>Och punsch i varendaste pöl.
+<br>
+<br> ||: Och mera öl -och mera öl!
+<br>Och mera öl -och mera öl!
+<br>Och mera öl -och mera öl!
+<br>Och mera öööööl :||</p>
+        </div>
+    </div>
+
+    <div id = "song31">
+        <input id="check31" type="checkbox"/>
+        <label for="check31">31 &emsp; En kul en</label>
+        <div class="submenu" id = "drop31">
+        <p> <b>Text: <b>Sånglederiet 2004 &emsp; <b>Melodi: <b>En kulen natt </p>
+        <p>En kul en natt natt natt
+<br>jag stegen styrde
+<br>mot kåren och började tokdricka öl
+<br>så skummet yrde
+<br>och vart jag sågade sågade såg
+<br>så såg jag såvitt jag kommer ihåg
+<br>inte en endaste endaste en
+<br>gulprickig katt
+<br>i rosa slips.</p>
+        </div>
+    </div>
+
+    <div id = "song32">
+        <input id="check32" type="checkbox"/>
+        <label for="check32">32 &emsp; Öl, öl, öl i glas</label>
+        <div class="submenu" id = "drop32">
+        <p> <b>Melodi: <b>Row, row, row your boat </p>
+        <p>||: Öl, öl, öl i glas eller i butelj.
+<br>Skummande, skummande, skummande,
+<br>skummande.
+<br>Ta en klunk och svälj. :||</p>
+        </div>
+    </div>
+
+    <div id = "song33">
+        <input id="check33" type="checkbox"/>
+        <label for="check33">33 &emsp; En pilsnerdrickare</label>
+        <div class="submenu" id = "drop33">
+        <p> <b>Melodi: <b>En sockerbagare </p>
+        <p>En pilsnerdrickare här bor i staden,
+<br>han dricker pilsner mest hela dagen,
+<br>han dricker gröna, han dricker blå,
+<br>han dricker några med älgar på.
+<br>Och i hans fönster hänga tomma glasen,
+<br>och alla burkar ifrån kalasen,
+<br>och är han nykter så kan han gå
+<br>ner till butiken och fylla på.</p>
+        </div>
+    </div>
+
+    <div id = "song34">
+        <input id="check34" type="checkbox"/>
+        <label for="check34">34 &emsp; Strejk på prips</label>
+        <div class="submenu" id = "drop34">
+        <p> <b>Melodi: <b>En natt jag drömde </p>
+        <p>I natt jag drömde något som,
+<br>jag aldrig drömt förut.
+<br>Jag drömde det var strejk på Pripps
+<br>och alla ölen var slut.
+<br>Jag drömde om en jättesal
+<br>där ölen stod på rad.
+<br>Jag drack så där ett tjugotal
+<br>och reste mig och sa;
+<br>
+<br>Armen i vinkel
+<br>blicken i skyn
+<br>så var det menat
+<br>whisky och renat
+<br>vårt mål alkohol
+<br>för dem som tål!</p>
+        </div>
+    </div>
+
+    <div id = "song35">
+        <input id="check35" type="checkbox"/>
+        <label for="check35">35 &emsp; Var nöjd med ölen</label>
+        <div class="submenu" id = "drop35">
+        <p> <b>Melodi: <b>Var nöjd med livet </p>
+        <p>Var nöjd med allt som ölen ger
+<br>och även om du dubbelt ser.
+<br>Glöm bort bekymmer sorger och besvär.
+<br>Var glad och nöjd för vet du vad
+<br>en folköl gör ju ingen glad.
+<br>Var nöjd med ölen som vi dricker här.</p>
+        </div>
+    </div>
+
+    <div id = "song36">
+        <input id="check36" type="checkbox"/>
+        <label for="check36">36 &emsp; Avskedssång till pilsnern</label>
+        <div class="submenu" id = "drop36">
+        <p> <b>Melodi: <b>Min Ponny </p>
+        <p>Vad gör man utav vatten, humle, malt och jäst?
+<br>Vanligt vatten, humle, malt och jäst?
+<br>Jo, drycken som jag tycker smakar allra bäst,
+<br>smakar allra bäst!
+<br>
+<br>Vad du är god min kära lilla pilsner,
+<br>så lagom besk och ljuvlig i din smak.
+<br>Nu lyfter jag mitt glas, min kära lilla pilsner
+<br>och vill att ni gör samma sak.</p>
+        </div>
+    </div>
+
+    <div id = "song37">
+        <input id="check37" type="checkbox"/>
+        <label for="check37">37 &emsp; Feta fransyskor</label>
+        <div class="submenu" id = "drop37">
+        <p> <b>Melodi: <b>Marsche militaire </p>
+        <p>Feta fransyskor som svettas om fötterna
+<br>de trampar druvor som sedan skall jäsas till vin
+<br>Transpirationen viktig e’
+<br>ty den ger
+<br>fin bouquet
+<br>Vårtor och svampar följer me’,
+<br>men vad gör väl de’?
+<br>
+<br>Vi vill ha vin, vill ha vin, vill ha mera vin
+<br>även om följderna bli att vi må lida pin
+<br>Flickor: Flaskan och glaset gått i sin
+<br>Pojkar: Hit med vin, mera vin
+<br>Flickor: Tror ni att vi är fyllesvin?
+<br>JA! (Fast större)</p>
+        </div>
+    </div>
+
+    <div id = "song38">
+        <input id="check38" type="checkbox"/>
+        <label for="check38">38 &emsp; Imsig vimsig</label>
+        <div class="submenu" id = "drop38">
+        <p> <b>Melodi: <b>Imse vimse spindel </p>
+        <p>Imsig vimsig blir man
+<br>utav lite vin.
+<br>Klättrar uppå stolen,
+<br>verkar piggelin.
+<br>Ramlar under bordet,
+<br>sussar en minut.
+<br>Vaknar av att vinet
+<br>i glaset har tatt slut.</p>
+        </div>
+    </div>
+
+    <div id = "song39">
+        <input id="check39" type="checkbox"/>
+        <label for="check39">39 &emsp; Lyft ditt välförsedda glas</label>
+        <div class="submenu" id = "drop39">
+        <p> <b>Melodi: <b>Ding Dong Merrily On High </p>
+        <p>Lyft ditt välförsedda glas,
+<br>det är en härlig börda.
+<br>Nu har grabbarna kalas,
+<br>vi segern snart skall skörda!
+<br>||: Ding dinge dinge ding
+<br>dinge dinge ding
+<br>dinge dinge ding dong dong.
+<br>Imorgon är det lördag! :||
+<br>
+<br>Sätt nu glaset till din mun,
+<br>se döden på dig väntar.
+<br>Nu har grabbarna kalas,
+<br>hör liemannen flämtar!
+<br>||: Ding dinge dinge ding
+<br>dinge dinge ding
+<br>dinge dinge ding dong dong.
+<br>Begravningsklockor klämtar! :||</p>
+        </div>
+    </div>
+
+    <div id = "song40">
+        <input id="check40" type="checkbox"/>
+        <label for="check40">40 &emsp; Spegelvisa</label>
+        <div class="submenu" id = "drop40">
+        <p> <b>Melodi: <b>Så länge skutan kan gå </p>
+        <p>Så länge rösten är mild,
+<br>så länge ingen är vild,
+<br>så länge spegeln på väggen ger halvskaplig bild.
+<br>Så länge alla kan stå,
+<br>så länge alla kan gå,
+<br>så länge alla kan tralla så fyller vi på</p>
+        </div>
+    </div>
+
+    <div id = "song41">
+        <input id="check41" type="checkbox"/>
+        <label for="check41">41 &emsp; Bordeaux, Bordeaux</label>
+        <div class="submenu" id = "drop41">
+        <p> <b>Melodi: <b>I sommarens soliga dagar </p>
+        <p>Jag minns än idag hur min fader
+<br>kom hem ifrån staden så glader
+<br>och ställde upp
+<br>flaskor i rader
+<br>och sade nöjd som så:
+<br>Bordeaux, Bordeaux!
+<br>
+<br>Han drack ett glas, kom i extas
+<br>och sedan blev det stort kalas.
+<br>Vi små glin, ja vi drack vin
+<br>som första klassens fyllesvin
+<br>och dansade runt där på bordet
+<br>och skrek så vi blev blå:
+<br>Bordeaux, Bordeaux! </p>
+        </div>
+    </div>
+
+    <div id = "song42">
+        <input id="check42" type="checkbox"/>
+        <label for="check42">42 &emsp; Samla er kamrater</label>
+        <div class="submenu" id = "drop42">
+        <p> <b>Text: <b>Sånglederiet 2013 &emsp; <b>Melodi: <b>Sjösala vals </p>
+        <p>Samla er kamrater, nu skall vinet begås
+<br>Fatta den i vinbenet, höj den mot skyarna
+<br>Ljuvaste av nektar, från systemet kan fås
+<br>Dränker oss i vällust och smörjer vårt krås
+<br>Livet går i vågor, snart kan vi hoppa bock
+<br>Det där om dagen efter betraktar vi som skrock
+<br>Imorgon ska vi vakna hos någon som vi inte känner
+<br>Tacka för natten och sedan gå hem och spy</p>
+        </div>
+    </div>
+
+    <div id = "song43">
+        <input id="check43" type="checkbox"/>
+        <label for="check43">43 &emsp; Hyfsvisa</label>
+        <div class="submenu" id = "drop43">
+        <p> <b>Melodi: <b>Traditionellt </p>
+        <p>Vad i allsin dar,
+<br>har du rödvin om kvar?
+<br>Är du sparsam eller snål?
+<br>SKÅL!
+<br>
+<br>~ Sparsamma sjunger :“Snål!”</p>
+        </div>
+    </div>
+
+    <div id = "song44">
+        <input id="check44" type="checkbox"/>
+        <label for="check44">44 &emsp; Vinet gör människan</label>
+        <div class="submenu" id = "drop44">
+        <p> <b>Melodi: <b>Mors lilla Olle </p>
+        <p>Trevligt och festligt ska de va’,
+<br>vinet gör människan vänlig och gla’
+<br>Vinet ger färg åt den blekaste prick,
+<br>rosor på kinden och solsken i blick,
+<br>
+<br>Bröder och systrar vi höjer vårt glas,
+<br>vinet förljuvar vårt simpla kalas.
+<br>Drick ur ditt glas och du får på ett kick.,
+<br>rosor på kinden och solsken i blick.</p>
+        </div>
+    </div>
+
+    <div id = "song45">
+        <input id="check45" type="checkbox"/>
+        <label for="check45">45 &emsp; Vid din sida</label>
+        <div class="submenu" id = "drop45">
+        <p> <b>Melodi: <b>Flicka i Havanna </p>
+        <p>Flickan/Pojken vid din sida,
+<br>hon/han har ännu rödvin kvar.
+<br>Sitter nu och väntar, att en smutt vi tar.
+<br>Skål nu kära vännen min,
+<br>drick nu ur ditt röda vin.
+<br>Glas blir tomt och du bli full.
+<br>Skål mitt hjärtegull!</p>
+        </div>
+    </div>
+
+    <div id = "song46">
+        <input id="check46" type="checkbox"/>
+        <label for="check46">46 &emsp; Du gamla du fina du årsgångna vin</label>
+        <div class="submenu" id = "drop46">
+        <p> <b>Melodi: <b>Du gamla, du fria </p>
+        <p>Du gamla du fina du årgångna vin 
+<br>Som plockats och trampats bland bergen
+<br>Jag dyrkar aromen och smaken sån
+<br>Men ljuvast utav allt är ändå färgen
+<br>Den drycken den går ända in i märgen
+<br>
+<br>Nu fyller vi glasen och höjer vår arm
+<br>Förlycka och vänskapsband vi skåla
+<br>Ja vinet det har enförunderlig charm
+<br>Är nästan likagott som rom och cola
+<br>Så låt oss därför med varandra skåla.</p>
+        </div>
+    </div>
+
+    <div id = "song47">
+        <input id="check47" type="checkbox"/>
+        <label for="check47">47 &emsp; Helan</label>
+        <div class="submenu" id = "drop47">
+        <p>  </p>
+        <p>Helan går, sjung hopp, fadderallan, lallanlej
+<br>Helan går, sjung hopp, fadderallanlej
+<br>Och den som inte helan tar
+<br>Han heller inte halvan får
+<br>Helan går
+<br>
+<br>~ mellansup ~
+<br>
+<br>Sjung hopp fadderallanlej</p>
+        </div>
+    </div>
+
+    <div id = "song48">
+        <input id="check48" type="checkbox"/>
+        <label for="check48">48 &emsp; Halvan</label>
+        <div class="submenu" id = "drop48">
+        <p> <b>Melodi: <b>Skånska slott </p>
+        <p>När helan man tagit
+<br>och halvan skall dricka,
+<br>det är som att kyssa
+<br>en nymornad flicka:
+<br>Ju mera man får,
+<br>desto mer vill man ha.
+<br>En ensammen jäkel
+<br>gör alls ingen gla’!
+</p>
+        </div>
+    </div>
+
+    <div id = "song49">
+        <input id="check49" type="checkbox"/>
+        <label for="check49">49 &emsp; Tersen</label>
+        <div class="submenu" id = "drop49">
+        <p> <b>Melodi: <b>Vintern rasat </p>
+        <p>Törsten rasar uti våra strupar.
+<br>Tungan hänger torr och styv och stel.
+<br>Men snart vankas stora långa supar
+<br>var och en får sin beskärda del.
+<br>Snapsen kommer, den vi vilja tömma,
+<br>denna nektar likt olympens saft.
+<br>Kommer oss att våra sorger glömma
+<br>snapsen skänker hälsa, liv och kraft.
+<br>
+<br>Fordom odlade man vindruvsranka,
+<br>av vars frukt man gjorde ädelt vin.
+<br>Nu man pressar saften ur en planka,
+<br>doftande av äkta terpentin.
+<br>Höj nu bägaren, o bröder och systrar,
+<br>låt den svenska skogen rinna kall,
+<br>ned i strupen, och om du är dyster:
+<br>Låt oss dricka upp en liten tall!
+<br>
+<br>Helan tänder helig eld i själen
+<br>halvan rosar livet som en sky.
+<br>Tersen känns från hjässan ner i hälen
+<br>kvarten gör en som en mänska ny.
+<br>Låt oss skåla med varann go´ vänner,
+<br>skål för våran levnads glada hopp.
+<br>Törstens eld på nytt i strupen bränner.
+<br>Leva livet! Skål och botten opp</p>
+        </div>
+    </div>
+
+    <div id = "song50">
+        <input id="check50" type="checkbox"/>
+        <label for="check50">50 &emsp; Quarten</label>
+        <div class="submenu" id = "drop50">
+        <p> <b>Melodi: <b>Och jungfrun hon gåri ringen </p>
+        <p>Så hastigt den lilla tersen
+<br>i struparna rann!
+<br>Vi sjöngo blott halva versen
+<br>och supen försvann!
+<br>Nu undrar kanske somliga vart?
+<br>Den sitter i magen och vill ha en kvart!</p>
+        </div>
+    </div>
+
+    <div id = "song51">
+        <input id="check51" type="checkbox"/>
+        <label for="check51">51 &emsp; Quinten</label>
+        <div class="submenu" id = "drop51">
+        <p> <b>Melodi: <b>När månen vandrar på fästet blå </p>
+        <p>Det satt en mås på en klyvarbom
+<br>och torr i krävan var kräket.
+<br>Och torr som fnöske var skepparns gom
+<br>och skutan låg uti bleke’.
+<br>Jag vill ha sill hördes måsen rope’
+<br>och skepparn svarte: jag vill ha OP
+<br>Om blott det finns... och det fanns!
+<br>
+<br>Nu måsen lyft ifrån klyvarbom,
+<br>och vinden spelar i tågen.
+<br>Och OP’n svalkat har skepparns gom,
+<br>jag önskar blott att jag såg ‘en.
+<br>Så nöjd och lycklig den gamle saten,
+<br>han sätter storseglet den krabaten.
+<br>Till sjöss han far,
+<br>och quinten tar.</p>
+        </div>
+    </div>
+
+    <div id = "song52">
+        <input id="check52" type="checkbox"/>
+        <label for="check52">52 &emsp; Sexten</label>
+        <div class="submenu" id = "drop52">
+        <p> <b>Melodi: <b>Internationalen </p>
+        <p>Mera brännvin i glasen,
+<br>mera glas på vårt bord,
+<br>mera bord på kalasen,
+<br>mer kalas på vår jord!
+<br>Mera jordar med måne,
+<br>mera månar i mars,
+<br>mera marscher till Skåne,
+<br>mera Skåne - Gud bevars!</p>
+        </div>
+    </div>
+
+    <div id = "song53">
+        <input id="check53" type="checkbox"/>
+        <label for="check53">53 &emsp; Septen</label>
+        <div class="submenu" id = "drop53">
+        <p> <b>Melodi: <b>Hej tomtegubbar </p>
+        <p>Tänk om jag hade lilla nubben
+<br>på ett snöre i halsen
+<br>Tänk om jag hade lilla nubben
+<br>på ett snöre i halsen
+<br>Jag skulle dra
+<br>den upp och ner
+<br>Så att det kändes
+<br>som många fler</p>
+        </div>
+    </div>
+
+    <div id = "song54">
+        <input id="check54" type="checkbox"/>
+        <label for="check54">54 &emsp; Bal på slottet</label>
+        <div class="submenu" id = "drop54">
+        <p> <b>Text: <b>Sånglederiet 2013 &emsp; <b>Melodi: <b>Mössens arbetsång (Ur Askungen) </p>
+        <p>Vi ska skåla, vi ska dricka
+<br>vi ska få en fyllehicka,
+<br>nu när snapsen står på bordet
+<br>så dricker vi in modet.
+<br>Vi är inte längre skygga,
+<br>stora, starka, snygga!
+<br>Å snapsen rinner ner i strupen,
+<br>första, andra, tredje supen.
+<br>Reser sig och skålar över bordet.
+<br>
+<br>~ Res dig upp, skåla ~
+<br>~ Drick ~
+<br>
+<br>Vad är väl en bal på slottet?</p>
+        </div>
+    </div>
+
+    <div id = "song55">
+        <input id="check55" type="checkbox"/>
+        <label for="check55">55 &emsp; Satans tårar</label>
+        <div class="submenu" id = "drop55">
+        <p> <b>Melodi: <b>Viljen I veta </p>
+        <p>Och viljen I veta och viljen I förstå
+<br>hur brännvinet kommigt till världen?
+<br>Jo, satan försökte att Herran förmå att frestas och vika för flärden.
+<br>Men satan han fick tji, och ilsken som ett bi
+<br>han gav sig iväg och i ilskan han grät,
+<br>och tårarna hans - det var brännvin.
+<br>
+<br>Och viljen I veta och viljen I förstå
+<br>hur svensken får mod uti barmen?
+<br>Jo, far min han fattade glaset som så, och sedan så höjde han armen.
+<br>Han bugade sig hit, han bugade sig dit,
+<br>så gladelig, så gladelig, och hällde sen supen på tarmen.</p>
+        </div>
+    </div>
+
+    <div id = "song56">
+        <input id="check56" type="checkbox"/>
+        <label for="check56">56 &emsp; Om jag hade brännvin</label>
+        <div class="submenu" id = "drop56">
+        <p> <b>Melodi: <b>Om jag hade pengar, If I was a rich girl (Gwen Stefani) </p>
+        <p>Om jag hade brännvin,
+<br>Renat, Skåne, Aalborg, O.P, Vinbär och en liten Bäsk.
+<br>Allihopa ställda på en rad,
+<br>vad jag skulle vara glad!
+<br>
+<br>Glasen fylls med brännvin,
+<br>Renat, Skåne, Aalborg, O.P, Vinbär och en liten Bäsk.
+<br>Livet leker, sinnet fylls med hopp,
+<br>nu skall lilla Bäsken drickas opp!</p>
+        </div>
+    </div>
+
+    <div id = "song57">
+        <input id="check57" type="checkbox"/>
+        <label for="check57">57 &emsp; Spritbolaget</label>
+        <div class="submenu" id = "drop57">
+        <p> <b>Melodi: <b>Snickerboa </p>
+        <p>Till spritbolaget ränner jag och bankar på dess port.
+<br>Jag vill ha nåt som bränner bra och får mig skitfull fort.
+<br>Expediten sade goddag, hur gammal kan min herre va?
+<br>Har du nåt leg, ditt fula drägg?
+<br>Kom hit igen när du fått skägg!
+<br>
+<br>Nej, detta var ju inte bra, jag vill bli full ikväll.
+<br>Då plötsligt en idé fick jag, dom har ju sprit på Shell.
+<br>Många flaskor stod där på rad, så nu jag kan bli full och glad.
+<br>Den röda drycken rinner ner,
+<br>
+<br>~ mellansup ~
+<br>
+<br>nu kan jag inte se nåt mer!</p>
+        </div>
+    </div>
+
+    <div id = "song58">
+        <input id="check58" type="checkbox"/>
+        <label for="check58">58 &emsp; Sinnena vinner</label>
+        <div class="submenu" id = "drop58">
+        <p> <b>Text: <b>Caroline Crafoord &emsp; <b>Melodi: <b>Vi går över daggsstängta berg </p>
+        <p>Vi ser över immiga glas, fallera,
+<br>med en vacker färg som diamant, fallera
+<br>och sinnena vinner
+<br>när nubbarna svinner
+<br>vi går över vingliga golv, fallera.</p>
+        </div>
+    </div>
+
+    <div id = "song59">
+        <input id="check59" type="checkbox"/>
+        <label for="check59">59 &emsp; När gäddorna leker</label>
+        <div class="submenu" id = "drop59">
+        <p> <b>Melodi: <b>När gäddorna leker </p>
+        <p>När gäddorna leker i vik och i vass
+<br>och solen går ner bakom Sjöbloms dass
+<br>Ja, då är det vår
+<br>Se upp där nere!
+<br>
+<br>~ mellansup ~
+<br>
+<br>Sjung hoppfaderallanlej!</p>
+        </div>
+    </div>
+
+    <div id = "song60">
+        <input id="check60" type="checkbox"/>
+        <label for="check60">60 &emsp; Det var en gång en helan-går-a-katt</label>
+        <div class="submenu" id = "drop60">
+        <p> <b>Melodi: <b>Vi går över daggstänkta berg </p>
+        <p>Det var en gång en helan-går-a-katt, fallera
+<br>som blev förälskad i en vanlig katt, fallera.
+<br>Och följden blev en jamare
+<br>fast den var mycket tamare.
+<br>Den var ju blott en halvan-går-a-katt, fallera.</p>
+        </div>
+    </div>
+
+    <div id = "song61">
+        <input id="check61" type="checkbox"/>
+        <label for="check61">61 &emsp; Bägaren</label>
+        <div class="submenu" id = "drop61">
+        <p> <b>Melodi: <b>En sockerbagare </p>
+        <p>En liten bägare står där på bordet
+<br>Det står och väntar på rätta ordet
+<br>Det rätta ordet blir till ett vrål
+<br>När alla törstiga skriker SKÅL!</p>
+        </div>
+    </div>
+
+    <div id = "song62">
+        <input id="check62" type="checkbox"/>
+        <label for="check62">62 &emsp; Ett mystiskt försvinnande</label>
+        <div class="submenu" id = "drop62">
+        <p> <b>Melodi: <b>Brev från kolonien </p>
+        <p>Men var är den, förra supen
+<br>Den stod här för, en minut sen
+<br>Aldrig får man, så det räcker
+<br>Jättegod är snapsen
+<br>Men kristallen läcker
+<br>
+<br>Ut ur flaskan, ner i glaset
+<br>Upp i luften. SKÅL kalaset!
+<br>In i munnen, ner i hålet
+<br>Det är vägen som är lyckan
+<br>- inte målet</p>
+        </div>
+    </div>
+
+    <div id = "song63">
+        <input id="check63" type="checkbox"/>
+        <label for="check63">63 &emsp; Gräv ur tundran</label>
+        <div class="submenu" id = "drop63">
+        <p> <b>Text: <b>FEST:s spex Lenin från 1989 &emsp; <b>Melodi: <b>Katjuscha </p>
+        <p>Gräv ur tundran två dussin potäter,
+<br>låt dem jäsa uti fjorton dar.
+<br>Modersmjölken för ryssar och sovjeter
+<br>brännes i babushkas samovar. Var, var, var?
+<br>Modersmjölken för ryssar och sovjeter
+<br>brännes i babushkas samovar.
+<br>Kyl sen drycken i Sibiriens tjäle,
+<br>tappa upp i immiga små glas.
+<br>Höj sen glasen för fosterlandets välgång
+<br>sjung ”Nastarovnja!” med en mäktig bas.
+<br>Höj sen glasen för fosterlandets välgång
+<br>sjung ”Nastarovnja!”
+<br>
+<br>~ mellansup ~
+<br>
+<br>Låt glasen gå i kras!</p>
+        </div>
+    </div>
+
+    <div id = "song64">
+        <input id="check64" type="checkbox"/>
+        <label for="check64">64 &emsp; Kom överste</label>
+        <div class="submenu" id = "drop64">
+        <p> <b>Melodi: <b>Uti vår hage </p>
+        <p>Uti vår mage en längtan mig tär,
+<br>kom hjärtans fröjd.
+<br>Där råder en hunger som ropar så här:
+<br>Kom kryddsill och kall potatis,
+<br>kom brännvin och quantum satis,
+<br>kom allt som kan drickas,
+<br>kom hjärtans fröjd.
+<br>
+<br>Uti vår mage en längtan mig tär,
+<br>kom hjärtans kär.
+<br>Vill du mig något så träffas vi där.
+<br>Kom Skåne och Aqua Vitæ.
+<br>Kom O.P. och allt vad sprit ä’.
+<br>Kom ljuva Genever, kom Överste!</p>
+        </div>
+    </div>
+
+    <div id = "song65">
+        <input id="check65" type="checkbox"/>
+        <label for="check65">65 &emsp; Mitt lilla lån</label>
+        <div class="submenu" id = "drop65">
+        <p> <b>Melodi: <b>Hej tomtegubbar </p>
+        <p>||: Mitt lilla lån, det räcker inte,
+<br>det går till öl och till brännvin. :||
+<br>Till öl och brännvin går det åt,
+<br>och vackra flickor/pojkar emellanåt.
+<br>Mitt lilla lån, det räcker inte,
+<br>det går till öl och till brännvin.</p>
+        </div>
+    </div>
+
+    <div id = "song66">
+        <input id="check66" type="checkbox"/>
+        <label for="check66">66 &emsp; Livet är härligt</label>
+        <div class="submenu" id = "drop66">
+        <p> <b>Text: <b>Chalmersspexet Katarina II från 1959 &emsp; <b>Melodi: <b>Stepnaja Kavalerijskaja </p>
+        <p>Livet är härligt!
+<br>Tavarisjtj, vårt liv är härligt!
+<br>Vi alla våra små bekymmer glömmer
+<br>när vi har fått en tår på tanden,
+<br>SKÅL!
+<br>
+<br>Ta dig en vodka!
+<br>Tavarisjtj, en liten vodka!
+<br>Glasen i botten vi tillsammans tömmer,
+<br>det kommer flera efter hand
+<br>EN SKÅL!
+<br>
+<br><i>~ Sjung den rakt igenom helt piano.
+<br>~ Därefter sjungs den forte, med ett starkt “HEJ!” efter första “vodka”. Sjung även
+<br>“HEJ!” istället för det sista “SKÅL!”.</i></p>
+        </div>
+    </div>
+
+    <div id = "song67">
+        <input id="check67" type="checkbox"/>
+        <label for="check67">67 &emsp; Alla måste känna till</label>
+        <div class="submenu" id = "drop67">
+        <p>  </p>
+        <p>SL: Alla måste känna till
+<br>A: Alla måste känna till
+<br>SL: Vad brännvin är
+<br>A: Vad brännvin är
+<br>
+<br>Alla måste…
+<br>
+<br>Jo! Det är undermedicinen,
+<br>brännvin läker alla sår
+<br>Brännvin trissar upp humöret
+<br>Så var med när helan går!
+<br>
+<br><i>~ 1:a gången körs den med knäppningar.
+<br>~ 2:a gången körs den pianissimo under det första partiet (alla måste känna
+<br>till - vad brännvin är), därefter überstarkt tillsammans med klappningar</i></p>
+        </div>
+    </div>
+
+    <div id = "song68">
+        <input id="check68" type="checkbox"/>
+        <label for="check68">68 &emsp; Vikingen</label>
+        <div class="submenu" id = "drop68">
+        <p> <b>Melodi: <b>When Johnny comes marching home </p>
+        <p>En viking älskar livets vann’
+<br>Hurra hurra!
+<br>Den hastigt i mitt svalg försvann
+<br>Hurra hurra!
+<br>Till kalv, till oxe, till sk och äsk
+<br>När käringen bara dricker läsk
+<br>Ja då vill alla vikingar ha en bäsk!
+<br>
+<br>När bäsken småningom är slut:
+<br>TRAGIK, TRAGIK!
+<br>Då bäres varje viking ut
+<br>Som lik sig lik
+<br>Sen om vi vaknar vi sjunger en bit
+<br>Och korkar sen upp Skånes Aquavit
+<br>Skål för alla vikingar som kom hit!
+<br>Skål för alla vikingar som kom hit!</p>
+        </div>
+    </div>
+
+    <div id = "song69">
+        <input id="check69" type="checkbox"/>
+        <label for="check69">69 &emsp; Feministvikingen</label>
+        <div class="submenu" id = "drop69">
+        <p> <b>Text: <b>Ur Kemi:s sångbok &emsp; <b>Melodi: <b>When Johnny comes marching home </p>
+        <p>En viking viker tvätten själv
+<br>Hurra hurra!
+<br>Ordet viking kommer sig därav, jaha!
+<br>Föräldraledighet delas exakt,
+<br>när vikingen sina barn har lagt,
+<br>då är frun hans ute på en jakt!
+<br>
+<br>En viking vill ha livets vann
+<br>Hurra hurra!
+<br>Men på sig själv han lägger band,
+<br>jaha, vad bra!
+<br>Mjödet det prioriteras sist,
+<br>tvätta och städa blir aldrig trist.
+<br>För våran viking, han är feminist!</p>
+        </div>
+    </div>
+
+    <div id = "song70">
+        <input id="check70" type="checkbox"/>
+        <label for="check70">70 &emsp; Alla tallarna</label>
+        <div class="submenu" id = "drop70">
+        <p> <b>Melodi: <b>Traditionell </p>
+        <p>Alla tallarna, alla tallarna,
+<br>alla stora, alla små,
+<br>alla tallarna, alla tallarna
+<br>ska vi koka brännvin på.
+<br>
+<br>Alla tallarna, alla tallarna
+<br>ifrån roten till dess topp,
+<br>alla tallarna, alla tallarna
+<br>ska vi ta och dricka opp</p>
+        </div>
+    </div>
+
+    <div id = "song71">
+        <input id="check71" type="checkbox"/>
+        <label for="check71">71 &emsp; Vi dricka, vi dricka...</label>
+        <div class="submenu" id = "drop71">
+        <p> <b>Melodi: <b>Vi komma, vi komma från Pepparkakeland </p>
+        <p>Vi dricka, vi dricka
+<br>upp allt som dukas fram.
+<br>Först ölen och vinet,
+<br>sen snapsar vi som fan.
+<br>Väl runda och goda,
+<br>vi lämnar vår salong.
+<br>Men ramlar ner och somnar sött
+<br>i rännstenens schäslong.
+<br>
+<br>På sjukan, på sjukan
+<br>de pumpar ur din buk.
+<br>Så är det, så är det
+<br>att vara fyllesjuk.
+<br>När doktorn han frågar:
+<br>-Hur kunde detta gå?
+<br>Då svarar du helt oberört:
+<br>-Jag går på KTH!</p>
+        </div>
+    </div>
+
+    <div id = "song72">
+        <input id="check72" type="checkbox"/>
+        <label for="check72">72 &emsp; Utvandrarna</label>
+        <div class="submenu" id = "drop72">
+        <p> <b>Text: <b>Kusin Kristina Ingvar &emsp; <b>Melodi: <b>När månen vandrar </p>
+        <p>Jag ska sälja min dromedar
+<br>och jag ska flytta till norden
+<br>För vem vill leva uti ett land
+<br>där man får ligga till borden
+<br>Jag konverterar här nu på snabben
+<br>jag vill ha akvavit till kebaben
+<br>Var ingen mes,
+<br>fyll upp din fez
+<br>
+<br>Det satt en mus i en hushållsost
+<br>och åt och åt utan måtta
+<br>tills osten blev till en mushåls-ost
+<br>och han en klotformad råtta.
+<br>”Så bra”, sa musen ”att va en fettboll
+<br>nu kan jag rulla med hast åt rätt håll:
+<br>Ostindien, Ostindien.”
+<br>
+<br>Det satt en älg i en klyvartopp,
+<br>förklädd i älgjaktens månad.
+<br>Han var befjädrad till horn och kropp
+<br>Ja, skepparn blev rätt förvånad.
+<br>”Jag är en mås, goa skepparn”, ljög den
+<br>förklädda älgen. Därefter flög den.
+<br>Mjukt föll den sen, på skepparen.</p>
+        </div>
+    </div>
+
+    <div id = "song73">
+        <input id="check73" type="checkbox"/>
+        <label for="check73">73 &emsp; Imbelupet</label>
+        <div class="submenu" id = "drop73">
+        <p> <b>Melodi: <b>Kors på idas grav </p>
+        <p>Imbelupet glaset står på bräcklig fot,
+<br>kalla pilsner flaskor luta sig därmot,
+<br>men därnere, miserere, uti magens avgrundsdjup,
+<br>sitter djävulen och väntar på en sup.
+<br>
+<br>Imbelupet glaset står på bräcklig fot,
+<br>kalla pilsnerpavor luta sig därmot,
+<br>men därnere, miserere, uti magens dunkla valv,
+<br>vankar djävulen i väntan på en halv.
+<br>
+<br>Imbelupet glaset står på bräcklig fot,
+<br>importerad bajerskt luta sig därmot,
+<br>men därnere, miserere, uti magen härs och tvärs,
+<br>knallar djävulen och väntar på en ters.
+<br>
+<br>Imbelupet glaset står på bräcklig fot,
+<br>klena lättölspavor luta sig därmot,
+<br>men därnere, miserere, uti magen djup och svart,
+<br>rusar djävulen och väntar på en kvart.
+<br>
+<br>Imbelupet glaset står på bräcklig fot,
+<br>kalla pilsnerhalvor luta sig därmot,
+<br>men därnere, miserere, sitter allas våran far
+<br>det är fan och han vill ha det som är kvar!</p>
+        </div>
+    </div>
+
+    <div id = "song74">
+        <input id="check74" type="checkbox"/>
+        <label for="check74">74 &emsp; Vintern rasat över Media</label>
+        <div class="submenu" id = "drop74">
+        <p> <b>Text: <b>Sångledargasquen 1999 &emsp; <b>Melodi: <b>Längtan till landet </p>
+        <p>Vintern rasat ner över oss alla
+<br>Tentor tryckt oss ner till nya djup
+<br>Men nu börjar skallsångerna skalla
+<br>Media tinar upp sig med en sup
+<br>
+<br>~ mellansup ~
+<br>
+<br>Brännvin ruskar liv i stela kroppar
+<br>Media vet att det ej finns något val
+<br>Ingenting nu vårat spritande stoppar
+<br>Vi ska glömma varje integral!</p>
+        </div>
+    </div>
+
+    <div id = "song75">
+        <input id="check75" type="checkbox"/>
+        <label for="check75">75 &emsp; Punschen kommer (Kall)</label>
+        <div class="submenu" id = "drop75">
+        <p> <b>Melodi: <b>GD </p>
+        <p>||: Punschen kommer,
+<br>punschen kommer
+<br>ljuv och sval.
+<br>Glasen imma,
+<br>röster stimma
+<br>i vår sal.
+<br>Skål för glada minnen!
+<br>Skål för varje vår!
+<br>Inga sorger finnes mer
+<br>när punsch vi får. :||</p>
+        </div>
+    </div>
+
+    <div id = "song76">
+        <input id="check76" type="checkbox"/>
+        <label for="check76">76 &emsp; Punschen kommer (Varm)</label>
+        <div class="submenu" id = "drop76">
+        <p>  </p>
+        <p>||: Punschen kommer,
+<br>punschen kommer
+<br>god och varm.
+<br>Vettet svinner,
+<br>droppen rinner
+<br>ner i tarm.
+<br>Skål för alla minnen!
+<br>Dem vi snart ej ha,
+<br>då ett par glas simmig punsch
+<br>vi hunnit ta. :||</p>
+        </div>
+    </div>
+
+    <div id = "song77">
+        <input id="check77" type="checkbox"/>
+        <label for="check77">77 &emsp; Punschen</label>
+        <div class="submenu" id = "drop77">
+        <p> <b>Melodi: <b>Rövarvisan ur Kamomilla stad </p>
+        <p>Punschen är och punschen var
+<br>och punschen skall förbliva
+<br>en lidelse vi alla har
+<br>som inget kan fördriva.
+<br>Ja punschen tinar upp så väl
+<br>och svalkar både kropp och själ.
+<br>Den botar begären
+<br>och lindrar besvären.
+<br>Ja punschen den gör både gott och väl!</p>
+        </div>
+    </div>
+
+    <div id = "song78">
+        <input id="check78" type="checkbox"/>
+        <label for="check78">78 &emsp; När punschen vandrat hädan</label>
+        <div class="submenu" id = "drop78">
+        <p> <b>Melodi: <b>Gökvisa </p>
+        <p>~ Stämma 1:
+<br>||: Punsch, punsch, punsch, punsch,
+<br>punsch, punsch, alla sorters :||
+<br>
+<br>~ Stämma 2:
+<br>När supen vandrat hädan
+<br>och maten lagts därpå
+<br>och kaffet står på bordet
+<br>vad väntar vi då på?
+<br>||: Jo, punsch och punsch
+<br>och ännu mera punsch :||
+<br>
+<br>Ja, den föll oss i smaken.
+<br>Nu ropar vi gutår!
+<br>Och koppen står där naken
+<br>och väntar på en tår.
+<br>||: Jo, punsch och punsch
+<br>och ännu mera punsch :||</p>
+        </div>
+    </div>
+
+    <div id = "song79">
+        <input id="check79" type="checkbox"/>
+        <label for="check79">79 &emsp; Punsch är förskräckligt</label>
+        <div class="submenu" id = "drop79">
+        <p> <b>Text: <b>Bergsspexet 1997 Reviderad: Martin Lindberg &emsp; <b>Melodi: <b>My Favorite Things </p>
+        <p>Punsch är en dryck som är hemsk och förskräcklig
+<br>Värre än Lolly som också är äcklig
+<br>Inget man föredrar på ett kalas
+<br>Hällre så boffar man thinner och gas
+<br>
+<br>Punschen den klibbar på glas och på händer
+<br>Klistrar ihop dina läppar och tänder
+<br>Spiller man punsch på sin nyköpta slips
+<br>Då blir den styv som en platta av gips
+<br>
+<br>Den är vidrig, helt olidlig
+<br>Min kropp säger nej
+<br>Men när jag har fått ett par öl i min kropp
+<br>så smakar den helt oke</p>
+        </div>
+    </div>
+
+    <div id = "song80">
+        <input id="check80" type="checkbox"/>
+        <label for="check80">80 &emsp; Tentaförberedelser</label>
+        <div class="submenu" id = "drop80">
+        <p> <b>Text: <b>Sånglederiet 2004 &emsp; <b>Melodi: <b>Mössens julafton </p>
+        <p>Då tentorna är många
+<br>som studiemetodik
+<br>tar vissa sitt förnuft till fånga
+<br>- andra arsenik.
+<br>Men här är en idé
+<br>kanske okonventionell?
+<br>Nu kommer ett galant recept på tentaskräll.
+<br>
+<br>Sprit i vatten, pressa en citron,
+<br>blanda sen med socker, smaka av och må kanon.
+<br>I med arrak, tag däri ett bad.
+<br>När tentan kommer är du redan full och nöjd och glad</p>
+        </div>
+    </div>
+
+    <div id = "song81">
+        <input id="check81" type="checkbox"/>
+        <label for="check81">81 &emsp; Studiemedelsrondo</label>
+        <div class="submenu" id = "drop81">
+        <p> <b>Melodi: <b>Ösa sand </p>
+        <p>||: Vi dricker punsch till lunch
+<br>när vi har fått avin.
+<br>Vi lunchar hela dagen
+<br>tills kassan går i sin. :||</p>
+        </div>
+    </div>
+
+    <div id = "song82">
+        <input id="check82" type="checkbox"/>
+        <label for="check82">82 &emsp; Lilla punschvisan</label>
+        <div class="submenu" id = "drop82">
+        <p> <b>Text: <b>Sånglederiet 2009 Reviderad: Sånglederiet 2013 &emsp; <b>Melodi: <b>Hedwig´s Theme </p>
+        <p>Drycken så god
+<br>bäst på vår jord
+<br>gyllene gul är den.
+<br>Söt så som få
+<br>får mig att må
+<br>bra i min egna värld.
+<br>Njutning är
+<br>åh jag är kär
+<br>i denna ljuva dryck.
+<br>Ja den är bra
+<br>mer vill jag ha
+<br>ge mig nu ännu mer.</p>
+        </div>
+    </div>
+
+    <div id = "song83">
+        <input id="check83" type="checkbox"/>
+        <label for="check83">83 &emsp; Djungelpunsch</label>
+        <div class="submenu" id = "drop83">
+        <p> <b>Melodi: <b>Var nöjd med allt som livet ger </p>
+        <p>Jag gillar alla tiders punsch
+<br>Punsch till frukost, punsch till lunch
+<br>En punsch till förrätt, varmrätt och dessert
+<br>Jag gillar punsch för vet du vad
+<br>Rent kaffe gör ju ingen glad
+<br>Så punsch för fulla muggar vill jag ha</p>
+        </div>
+    </div>
+
+    <div id = "song84">
+        <input id="check84" type="checkbox"/>
+        <label for="check84">84 &emsp; Klafsa i punsch</label>
+        <div class="submenu" id = "drop84">
+        <p> <b>Melodi: <b>Familjen Addams </p>
+        <p>När fester man vill liva
+<br>Så är det bäst att kliva
+<br>Upp på bordets skiva
+<br>Och klafsa runt i punsch
+<br>Klafsa i punsch, slurp, slurp...</p>
+        </div>
+    </div>
+
+    <div id = "song85">
+        <input id="check85" type="checkbox"/>
+        <label for="check85">85 &emsp; Punsch, punsch filibom</label>
+        <div class="submenu" id = "drop85">
+        <p>  </p>
+        <p>Punsch, punsch, filibom-bom-bom,
+<br>filibom-bom-bom, filibom-bom-bom.
+<br>Punsch, punsch, filibom-bom-bom,
+<br>filibom-bom-bom, filibom.
+<br>
+<br>Vi har ju både Cederlunds
+<br>och Carlshamns flagg
+<br>och Grönstedts blå och lilla Caloric.
+<br>Det blir för trist med sodavatten,
+<br>sodavatten, sodavatten.
+<br>Det blir för trist med sodavatten,
+<br>nej, ge oss mera punsch!</p>
+        </div>
+    </div>
+
+    <div id = "song86">
+        <input id="check86" type="checkbox"/>
+        <label for="check86">86 &emsp; Nu har vi punsch</label>
+        <div class="submenu" id = "drop86">
+        <p> <b>Melodi: <b>Nu har vi jul här i vårt hus </p>
+        <p>Nu har vi punsch här på vårt bord,
+<br>punschen är kommen, räddad är vår kväll.
+<br>Ka­et är varmt, punchen är kall,
+<br>sjung i vår trall:
+<br>
+<br>Punschen rinner ner i lilla magen,
+<br>skapar där de kända välbehagen,
+<br>som vi gillar, som vi gillar,
+<br>ja som vi gillar till tusen.</p>
+        </div>
+    </div>
+
+    <div id = "song87">
+        <input id="check87" type="checkbox"/>
+        <label for="check87">87 &emsp; Tucks punschvisa</label>
+        <div class="submenu" id = "drop87">
+        <p> <b>Melodi: <b>Jag fångade en räv </p>
+        <p>Jag hällde upp en punsch en dag
+<br>Den punschen den var frusen
+<br>Men jag blev varm i buk och tarm
+<br>Och knoppen blev på snusen
+<br>
+<br>Åh, vad man kan bli glad
+<br>Av punschen ljuv och sval
+<br>Så nu vill jag ha en till
+<br>Och lyckan blir total</p>
+        </div>
+    </div>
+
+    <div id = "song88">
+        <input id="check88" type="checkbox"/>
+        <label for="check88">88 &emsp; Sista punschvisan</label>
+        <div class="submenu" id = "drop88">
+        <p> <b>Melodi: <b>Auld Lang Syne </p>
+        <p>När punschen småningom är slut
+<br>och vår flaska blivit tom,
+<br>då vänder vi den upp och ner
+<br>till dess inget rinner ur.
+<br>
+<br>||: Så slickar vi, så slickar vi
+<br>båd utanpå och i
+<br>och fi­nns där ändå något kvar
+<br>får det va’ till sämre dar :||</p>
+        </div>
+    </div>
+
+</body>
 </html>
