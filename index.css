@@ -53,6 +53,15 @@ margin-top: 10px;
 margin-bottom: 10px;
 }
 
+@keyframes move_animation{
+  from {margin-left: 100%;}
+  to {margin-left: -15%;}
+}
+.moving{
+    animation-name: move_animation;
+    animation-duration: 4s;
+}
+
 
 #check1:checked~#drop1 {
 display: block;
