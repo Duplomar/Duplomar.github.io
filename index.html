@@ -2057,7 +2057,7 @@ function search() {
         <p> <b>Melodi: </b>Auld Lang Syne </p>
         <p>När punschen småningom är slut
 <br>och vår flaska blivit tom,
-<br>då vänder vi den upp och ner
+<br>då <span style="color:brown" onClick="document.body.style.transition = 'transform 2s'; if(document.body.style.transform == 'rotate(180deg)'){document.body.style.transform = 'rotate(0deg)'}else{document.body.style.transform = 'rotate(180deg)'}">vänder</span> vi den upp och ner
 <br>till dess inget rinner ur.
 <br>
 <br>||: Så slickar vi, så slickar vi
@@ -2346,7 +2346,7 @@ function search() {
         <div class="submenu" id = "drop103">
         <p> <b>Melodi: </b>Memories </p>
         <p>Minne, jag har tappat mitt minne.
-<br>Är jag svensk eller finne?
+<br>Är jag <span style='color:#cccc11' onClick = "if(document.getElementById('horga') == null){document.getElementById('horga_text').style.display = 'block';document.getElementById('horga_text').innerHTML += '</br><audio autoplay controls id =\'horga\'><source src=\'horga.mp3\'></audio>'}">svensk</span> eller <span style="color:#1111bb" onClick = "if(document.getElementById('ievan') == null){document.getElementById('ievan_text').style.display = 'block'; document.getElementById('ievan_text').innerHTML += '</br><audio autoplay controls id =\'ievan\'><source src=\'ievan_polkka.mp3\'></audio>'}">finne</span>?
 <br>Kommer inte ihåg.
 <br>Inne, är jag ut’ eller inne?
 <br>Jag har luckor i minne’,
@@ -2364,7 +2364,96 @@ function search() {
 <br>Mutta tiedän
 <br>mä keinon mikä auttaapi tuo:
 <br>Ota ryyppy, ja muistis juo!
-<br>Bosse Österberg</p>
+<br>Bosse Österberg
+<br>
+<br><span id = "horga_text" style = "display:none">
+<br><span style="font-size:20px; text-decoration: underline;">Horgalåten</span>
+<br>Spelmannen drog fiol'n ur lådan
+<br>Och lyfte stråken högt mot söndagssolens kula
+<br>Då blev det fart på Horgafolket
+<br>De glömde Gud och hela världen
+<br>Dansen gick på äng och backar
+<br>Högt uppå Horgaåsens topp
+<br>Man slet ut båd' skor och klackar
+<br>Aldrig fick man på dansen stopp
+<br>Varifrån kommer du som spelar
+<br>Säg vem har lärt dig detta spel det vilda galna?
+<br>Stannar du inte brister hjärtat
+<br>Å Gud bevare han har bockfot!
+<br>
+<br>Klockorna hade ringt i dalen
+<br>Och där gick far och mor och bror till socken kyrkan
+<br>Var kan nu Horgas ungdom vara
+<br>Å herregud de dansar ännu!
+<br>Dansen gick till Horgalåten
+<br>Högt uppå Horgaåsens topp
+<br>Man har nu inte långt till gråten
+<br>Dansar nu sönder själ och kropp
+<br>Hejda din stråke spelman innan
+<br>Vi dansar liv och själ och alla ben ur kroppen
+<br>Nej inte slutar han sin dans
+<br>Förrän allesammans faller döda!</span>
+<br>
+<br><span id = "ievan_text" style = "display:none">
+<br><span style="font-size:20px; text-decoration: underline;">Ievan Polkka</span>
+<br>Nuapurista kuulu se polokan tahti jalakani pohjii kutkutti
+<br>Ievan äiti se tyttöösä vahti vaan kyllähän Ieva sen jutkutti
+<br>Sillä ei meitä silloin kiellot haittaa
+<br>Kun myö tanssimme laiasta laitaan
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen
+<br>
+<br>Ievan suu oli vehnäsellä ko immeiset onnee toevotti
+<br>Peä oli märkänä jokaisella ja viulu se vinku ja voevotti
+<br>Ei tätä poikoo märkyys haittaa
+<br>Sillon ko laskoo laiasta laitaan
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen
+<br>
+<br>Ievan äiti se kammarissa virsiä veisata huijjuutti
+<br>Kun tämä poika naapurissa ämmän tyttöä nuijjuutti
+<br>Eikä tätä poikoo ämmät haittaa
+<br>Sillon ko laskoo laiasta laitaan
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen
+<br>
+<br>Hilipati hilipati hilipati hillaa
+<br>Hilipati hilipati hilipampaa
+<br>Jalituli jallaa talituli jallaa
+<br>Tilitali tilitali tilitantaa
+<br>Hilipati hillaa hilipati hillaa
+<br>Hilipati hilipati jalituli jallaa
+<br>Tilitali tallaa, tulituli jallaa
+<br>Hilipati hilipati hilipampaa
+<br>Rimpatirillaa ripirapirullaa
+<br>Rumpatirumpa tiripirampuu
+<br>Jamparingaa rimpatiraparan
+<br>Tsupantupiran dillandu
+<br>Japat stilla dipudupu dullaa
+<br>Dumpatidupa lipans dullaa
+<br>Dipidapi dullaa rimpati rukan
+<br>Ribitit stukan dillandu
+<br>Jatsatsa barillas dilla lapadeian dullan deian doo
+<br>Joparimba badabadeia stulla
+<br>Laba daba daba dujan dillandu
+<br>Barillas dilla deiaduu badaba daga daga daga daga dujaduu
+<br>Badu dubi dubi dubi dejaduu
+<br>Badaba dillas dillan dejaduu
+<br>
+<br>Siellä oli lystiä soiton jäläkeen sain minä kerran sytkyyttee
+<br>Kottiin ko mäntii ni ämmä se riitelj ja Ieva jo alako nyyhkyytteek
+<br>Minä sanon Ievalle mitäpä se haittaa
+<br>Laskemma vielähi laiasta laitaa
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen
+<br>
+<br>Muorille sanon jotta tukkee suusi en ruppee sun terveyttäs takkoomaa
+<br>Terveenä peäset ku korjoot luusi ja määt siitä murjuus makkoomaa
+<br>Ei tätä poikoo hellyys haittaa
+<br>Ko akkoja huhkii laiasta laitaan
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen
+<br>
+<br>Sen minä sanon jotta purra pittää ei mua niin voan nielasta
+<br>Suat männä ite vaikka lännestä ittään vaan minä en luovu Ievasta
+<br>Sillä ei tätä poikoo kainous haittaa
+<br>Sillon ko tanssii laiasta laitaan
+<br>Salivili hipput tupput täppyt äppyt tipput hilijalleen</span></p>
         </div>
     </div>
 
@@ -2591,7 +2680,7 @@ function search() {
         <label class = "song_block" for="check111">111 &emsp; Datas visa</label>
         <div class="submenu" id = "drop111">
         <p> <b>Text: </b>FKM, 2000 &emsp; <b>Melodi: </b>Åh, hur saligt att få vandra </p>
-        <p>Alla de som går på Data
+        <p>Alla de som går på <span style = "color: #ec5f99" onClick = "document.body.style.backgroundColor='#ec5f99'">Data</span>
 <br>sitter mest och kodar Pearl-script varje natt.
 <br>Med dem kan man inte prata,
 <br>om man inte loggat in på någon chatt.
